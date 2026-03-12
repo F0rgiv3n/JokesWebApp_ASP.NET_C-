@@ -32,7 +32,7 @@ kanoume Object Relation Mapper
 package manager console => add-migration "initialsetup" =>update database  
 
 -------------------------------------------------------------------------  
-next improvements:  
+next improvements:  {done}  
 1 show joke owner  
 2 hide th joke answer  
 3 limit "create"to logged in users
