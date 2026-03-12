@@ -31,11 +31,9 @@ namespace JokesWebApp.Controllers
         }
 
         // Post: Jokes/ShowSearchResults
-        
-        public string ShowSearchResults(String SearchPhrase)
+        public async Task<IActionResult> ShowSearchResults( String SearchPhrase)
         {
-            return "You entered " + SearchPhrase ;
-          
+            return View("Index",await _context.Joke.Where(j =>j.JokeQuestion.Contains(SearchPhrase)).ToListAsync());   // ousiastika kanw mia search function me sql query 
         }
 
         // GET: Jokes/Details/5
