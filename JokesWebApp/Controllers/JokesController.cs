@@ -16,16 +16,16 @@ namespace JokesWebApp.Controllers
 
         public JokesController(ApplicationDbContext context)
         {
-            _context = context;
+            _context = context; 
         }
 
         // GET: Jokes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index() 
         {
             return View(await _context.Joke.ToListAsync());
         }
         // GET: Jokes/ShowSearchForm
-        public async Task<IActionResult> ShowSearchForm()
+        public async Task<IActionResult> ShowSearchForm() 
         {
             return View();
         }
